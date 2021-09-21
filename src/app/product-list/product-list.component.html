@@ -1,5 +1,8 @@
 <h2>Products</h2>
 
+<!-- *ngFor creates a div for each product in products -->
+<!-- double curly braces render the property value as text -->
+<!-- Square brackets are property binding syntax -->
 <div *ngFor="let product of products">
   <h3>
     <a
@@ -10,6 +13,7 @@
       {{ product.name }}
     </a>
   </h3>
+  <!-- *ngIf only creates the <p> element if the current product has a description -->
   <p *ngIf="product.description">Description: {{ product.description }}</p>
   <button (click)="share()">Share</button>
   <app-product-alerts
